@@ -51,9 +51,18 @@ namespace Algo_LU
         {
             listZ = GetMyString().OrderByDescending(words => words).ToList();
 
-            for(int i = 0; i < listZ.Count; i++)
+            //for(int i = 0; i < listZ.Count; i++)
+            //{
+            //    Console.WriteLine(listZ[i]);
+            //}
+        }
+
+        public void SortOnlyZWords()
+        {
+            var zWordList = from z in GetMyString() where z.StartsWith("Z") select z;
+           for(int i = 0; i < zWordList.Count(); i++)
             {
-                Console.WriteLine(listZ[i]);
+                Console.WriteLine(zWordList.ElementAt(i));
             }
         }
 
