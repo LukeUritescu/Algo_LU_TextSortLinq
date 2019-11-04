@@ -17,7 +17,8 @@ namespace Algo_LU
             readFiles.SortOnlyZWords();
             readFiles.SortHeFirst();
             readFiles.SortESecond();
-            
+            Console.WriteLine("Press Enter When Done");
+            Console.ReadLine();
         }
     }
 }

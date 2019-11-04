@@ -49,24 +49,24 @@ namespace Algo_LU
         public void SortZFirst()
         {
             string pathZ = @"C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\ReverseAlphabetical.txt";
+            stopWatch.ResetStopWatch();
+            stopWatch.StartStopWatch();
             listZ = GetMyString().OrderByDescending(words => words).ToList();
+            stopWatch.StopStopWatch();
+            stopWatch.GetTimeElapsed("SortZFirst");
 
-            //for(int i = 0; i < listZ.Count; i++)
-            //{
-            //    Console.WriteLine(listZ[i]);
-            //}
             WriteSortList(pathZ, listZ);
         }
 
         public void SortOnlyZWords()
         {
             string pathOnlyZ = @"C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\OnlyZ.txt";
-
+            stopWatch.ResetStopWatch();
+            stopWatch.StartStopWatch();
             var zWordList = from z in GetMyString() where z.StartsWith("Z") select z;
-           //for(int i = 0; i < zWordList.Count(); i++)
-           // {
-           //     Console.WriteLine(zWordList.ElementAt(i));
-           // }
+            stopWatch.StopStopWatch();
+            stopWatch.GetTimeElapsed("SortOnlyZ");
+
             WriteSortList(pathOnlyZ, zWordList.ToList());
 
         }
@@ -74,11 +74,12 @@ namespace Algo_LU
         public void SortHeFirst()
         {
             string pathOnlyHE = @"C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\OnlyHE.txt";
+            stopWatch.ResetStopWatch();
+            stopWatch.StartStopWatch();
             var heWordList = from z in GetMyString() where z.StartsWith("He") select z;
-            //for (int i = 0; i < heWordList.Count(); i++)
-            //{
-            //    Console.WriteLine(heWordList.ElementAt(i));
-            //}
+            stopWatch.StopStopWatch();
+            stopWatch.GetTimeElapsed("SortOnlyHe");
+
             WriteSortList(pathOnlyHE, heWordList.ToList());
 
         }
@@ -86,7 +87,8 @@ namespace Algo_LU
         public void SortESecond()
         {
             string pathOnlyE = @"C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\OnlyE.txt";
-
+            stopWatch.ResetStopWatch();
+            stopWatch.StartStopWatch();
             List<string> eAtSecondPosition = new List<string>();
             foreach(string line in GetMyString())
             {
@@ -101,10 +103,8 @@ namespace Algo_LU
                 }
             }
             eAtSecondPosition.OrderBy(words => words).ToList();
-            //for(int i = 0; i < eAtSecondPosition.Count; i++)
-            //{
-            //    Console.WriteLine(eAtSecondPosition[i]);
-            //}
+            stopWatch.StopStopWatch();
+            stopWatch.GetTimeElapsed("SortOnlyEAtSecond");
             WriteSortList(pathOnlyE, eAtSecondPosition);
         }
 
