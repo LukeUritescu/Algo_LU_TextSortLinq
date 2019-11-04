@@ -15,14 +15,20 @@ namespace Algo_LU
 
         private List<string> myFinallSortedStrings;
 
-        private string path = @"C:\Workspace\Algorithms\Algo_LU\words.txt";
+        private List<string> listZ;
+        private string path = @"C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\words.txt";
 
         public ReadAllFilesAndSort()
         {
             stopWatch = new PersonalStopWatch();
             myBaseStrings = new List<string>();
             myFinallSortedStrings = new List<string>();
+            listZ = new List<string>();
+        }
 
+        public List<string> GetMyString()
+        {
+            return myBaseStrings;
         }
 
         public void ReadInFile()
@@ -34,16 +40,21 @@ namespace Algo_LU
 
             }
 
-            //This is just to make sure the list is working
-            for (int i = 0; i < myBaseStrings.Count; i++)
-            {
-                Console.WriteLine(myBaseStrings[i]);
-            }
+            ////This is just to make sure the list is working
+            //for (int i = 0; i < myBaseStrings.Count; i++)
+            //{
+            //    Console.WriteLine(myBaseStrings[i]);
+            //}
         }
 
         public void SortZFirst()
         {
+            listZ = GetMyString().OrderByDescending(words => words).ToList();
 
+            for(int i = 0; i < listZ.Count; i++)
+            {
+                Console.WriteLine(listZ[i]);
+            }
         }
 
         public void SortHeFirst()
@@ -56,11 +67,11 @@ namespace Algo_LU
 
         }
 
-        public void WriteSortList(string path, List<string> sortWriteList)
+        public void WriteSortList(string Path, List<string> sortWriteList)
         {
             try
             {
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(path, true))
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(Path, true))
                 {
                     for (int i = 0; i < sortWriteList.Count; i++)
                     {

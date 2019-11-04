@@ -13,6 +13,8 @@ namespace Algo_LU
         {
             readFiles = new ReadAllFilesAndSort();
             readFiles.ReadInFile();
+            readFiles.SortZFirst();
+            Console.ReadLine();
         }
     }
 }

@@ -5,3 +5,10 @@ C:\Workspace\Algorithms\Algo_LU\Algo_LU\obj\Debug\Algo_LU.csprojAssemblyReferenc
 C:\Workspace\Algorithms\Algo_LU\Algo_LU\obj\Debug\Algo_LU.csproj.CoreCompileInputs.cache
 C:\Workspace\Algorithms\Algo_LU\Algo_LU\obj\Debug\Algo_LU.exe
 C:\Workspace\Algorithms\Algo_LU\Algo_LU\obj\Debug\Algo_LU.pdb
+C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\Algo_LU\bin\Debug\Algo_LU.exe.config
+C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\Algo_LU\bin\Debug\Algo_LU.exe
+C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\Algo_LU\bin\Debug\Algo_LU.pdb
+C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\Algo_LU\obj\Debug\Algo_LU.csprojAssemblyReference.cache
+C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\Algo_LU\obj\Debug\Algo_LU.csproj.CoreCompileInputs.cache
+C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\Algo_LU\obj\Debug\Algo_LU.exe
+C:\Workspace\Algorithms\Algo_LU_TextSortLinq\Algo_LU\Algo_LU\obj\Debug\Algo_LU.pdb
