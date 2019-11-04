@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/// <summary>
+/// Used this https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq
+/// </summary>
 namespace Algo_LU
 {
     class ReadAllFilesAndSort
@@ -68,12 +72,33 @@ namespace Algo_LU
 
         public void SortHeFirst()
         {
-
+            var heWordList = from z in GetMyString() where z.StartsWith("He") select z;
+            for (int i = 0; i < heWordList.Count(); i++)
+            {
+                Console.WriteLine(heWordList.ElementAt(i));
+            }
         }
 
         public void SortESecond()
         {
+            List<string> eAtSecondPosition = new List<string>();
+            foreach(string line in GetMyString())
+            {
+                if(line.Length >= 2)
+                {
 
+                if(line.ToCharArray()[1]  == 'e')
+                {
+                    eAtSecondPosition.Add(line);
+                }
+
+                }
+            }
+            eAtSecondPosition.OrderBy(words => words).ToList();
+            for(int i = 0; i < eAtSecondPosition.Count; i++)
+            {
+                Console.WriteLine(eAtSecondPosition[i]);
+            }
         }
 
         public void WriteSortList(string Path, List<string> sortWriteList)
